@@ -55,6 +55,70 @@ const structuredData = {
     {"@type": "MedicalProcedure", "name": "Prothèses dentaires"},
     {"@type": "MedicalProcedure", "name": "Soins conservateurs"},
     {"@type": "MedicalProcedure", "name": "Urgences dentaires 24h/24"}
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "50",
+    "bestRating": "5"
+  },
+  "potentialAction": {
+    "@type": "ReserveAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": `${siteUrl}/#contact`,
+      "actionPlatform": [
+        "http://schema.org/DesktopWebPlatform",
+        "http://schema.org/MobileWebPlatform"
+      ]
+    },
+    "result": {
+      "@type": "Reservation",
+      "name": "Rendez-vous dentaire"
+    }
+  },
+  "paymentAccepted": ["Espèces", "Carte bancaire", "Chèque"],
+  "currenciesAccepted": "MAD",
+  "areaServed": {
+    "@type": "City",
+    "name": "Témara"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Dr. SABAOUI Otmane",
+    "jobTitle": "Chirurgien-Dentiste"
+  }
+};
+
+// FAQ Schema for Google Rich Results
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quels sont les horaires de la clinique dentaire ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La clinique est ouverte du lundi au vendredi de 9h à 19h, et le samedi de 9h à 13h. Service d'urgence disponible 24h/24."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment prendre rendez-vous ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vous pouvez nous appeler au +212661530407, +212537481383 ou +212667670080, ou utiliser le formulaire de contact sur notre site."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels services dentaires proposez-vous ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nous offrons implants dentaires, orthodontie, blanchiment, prothèses dentaires, soins conservateurs et urgences dentaires 24h/24."
+      }
+    }
   ]
 };
 ---
@@ -90,6 +154,7 @@ const structuredData = {
 
     <!-- Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J0HTHN1P8Z"></script>
