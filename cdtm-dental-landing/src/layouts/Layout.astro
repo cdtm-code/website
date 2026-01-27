@@ -1,0 +1,124 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Clinique Dentaire Temara Mall - Soins dentaires de qualité à Témara. Dr. SABAOUI Otmane et son équipe vous accueillent pour tous vos besoins dentaires." } = Astro.props;
+
+const siteUrl = "https://cliniquedentairetemaramall.com";
+const ogImage = `${siteUrl}/logo.jpg`;
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
+
+// Structured data for Dentist/LocalBusiness
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Clinique Dentaire Temara Mall (CDTM)",
+  "description": "Cabinet dentaire moderne à Témara offrant des soins dentaires complets: implants, orthodontie, blanchiment, prothèses et soins préventifs.",
+  "url": siteUrl,
+  "logo": ogImage,
+  "image": ogImage,
+  "telephone": ["+212661530407", "+212537481383", "+212667670080"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4ème étage, Résidence Témara Mall 2, Bureau 16, Av. Hassan II",
+    "addressLocality": "Témara",
+    "addressCountry": "MA"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 33.9231675,
+    "longitude": -6.9189915
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday"],
+      "opens": "09:00",
+      "closes": "13:00"
+    }
+  ],
+  "priceRange": "$$",
+  "sameAs": ["https://www.instagram.com/clinique_dentaire_temara_mall"],
+  "medicalSpecialty": ["Dentisterie", "Orthodontie", "Prothèse dentaire"],
+  "availableService": [
+    {"@type": "MedicalProcedure", "name": "Implants dentaires"},
+    {"@type": "MedicalProcedure", "name": "Orthodontie"},
+    {"@type": "MedicalProcedure", "name": "Blanchiment dentaire"},
+    {"@type": "MedicalProcedure", "name": "Prothèses dentaires"},
+    {"@type": "MedicalProcedure", "name": "Soins conservateurs"},
+    {"@type": "MedicalProcedure", "name": "Urgences dentaires 24h/24"}
+  ]
+};
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="dentiste, Témara, clinique dentaire, implants, orthodontie, blanchiment, soins dentaires, Temara Mall" />
+    <meta name="author" content="Clinique Dentaire Temara Mall" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="fr_MA" />
+    <meta property="og:site_name" content="Clinique Dentaire Temara Mall" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/logo.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <title>{title}</title>
+  </head>
+  <body class="font-sans antialiased text-gray-900 bg-white">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --color-primary: 37 99 235; /* medical blue RGB (blue-600) */
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+</style>

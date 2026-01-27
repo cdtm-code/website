@@ -1,0 +1,79 @@
+---
+import { Image } from 'astro:assets';
+import img1 from '../assets/DSC00904-Large.jpg';
+import img2 from '../assets/DSC00908-Large.jpg';
+import img3 from '../assets/DSC00930-Large.jpg';
+---
+
+<section id="about" class="py-20 bg-white" aria-labelledby="about-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 id="about-heading" class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          Votre clinique dentaire à Témara
+        </h2>
+        <p class="text-lg text-gray-600 mb-6">
+          Située au cœur de Temara Mall, notre clinique vous offre un environnement moderne
+          et accueillant pour tous vos soins dentaires. Le Dr. SABAOUI Otmane et son équipe
+          qualifiée s'engagent à vous fournir des soins de la plus haute qualité.
+        </p>
+        <ul class="space-y-4 mb-8">
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-700">Équipements de dernière génération</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-700">Équipe expérimentée et à l'écoute</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-700">Normes d'hygiène strictes</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-700">Accueil chaleureux pour petits et grands</span>
+          </li>
+        </ul>
+        <a
+          href="#contact"
+          class="inline-flex items-center text-primary-500 hover:text-primary-600 font-semibold transition-colors"
+        >
+          Nous contacter
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <Image
+          src={img1}
+          alt="Accueil de la clinique"
+          class="rounded-lg object-cover w-full h-48 md:h-64"
+          loading="lazy"
+        />
+        <Image
+          src={img2}
+          alt="Salle d'attente confortable"
+          class="rounded-lg object-cover w-full h-48 md:h-64 mt-8"
+          loading="lazy"
+        />
+        <Image
+          src={img3}
+          alt="Espace de soins moderne"
+          class="rounded-lg object-cover w-full h-48 md:h-64 col-span-2"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</section>

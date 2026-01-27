@@ -1,0 +1,6 @@
+# Robots.txt for Clinique Dentaire Temara Mall
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://cliniquedentairetemaramall.com/sitemap-index.xml

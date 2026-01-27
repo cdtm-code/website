@@ -1,0 +1,83 @@
+---
+import { Image } from 'astro:assets';
+import img1 from '../assets/DSC00878-Large.jpg';
+import img2 from '../assets/DSC00885-Large.jpg';
+import img3 from '../assets/DSC00893-Large.jpg';
+
+const services = [
+  {
+    title: "Soins Dentaires",
+    description: "Traitements complets pour des dents saines : caries, détartrage, extractions et soins préventifs.",
+    icon: `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3c-2.5 0-4.5 1.5-4.5 4 0 1.5.8 2.8 2 3.5l-1.2 9c-.1 1 .7 1.5 1.5 1.5h4.4c.8 0 1.6-.5 1.5-1.5l-1.2-9c1.2-.7 2-2 2-3.5 0-2.5-2-4-4.5-4z"/></svg>`,
+  },
+  {
+    title: "Implants Dentaires",
+    description: "Remplacement durable des dents manquantes avec des implants de haute qualité.",
+    icon: `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 2v4m0 12v4m-6-10H2m20 0h-4m-2.5-7.5L13 7m-2 10l-2.5 2.5m9-2.5L15 17M9 7l-2.5-2.5"/></svg>`,
+  },
+  {
+    title: "Orthodontie",
+    description: "Alignement des dents pour un sourire parfait : appareils classiques et invisibles.",
+    icon: `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 12h16M7 9v6m5-6v6m5-6v6"/></svg>`,
+  },
+  {
+    title: "Blanchiment",
+    description: "Retrouvez des dents blanches et éclatantes grâce à nos techniques professionnelles.",
+    icon: `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>`,
+  },
+  {
+    title: "Prothèses Dentaires",
+    description: "Prothèses fixes et amovibles sur mesure pour restaurer votre sourire.",
+    icon: `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>`,
+  },
+  {
+    title: "Soins Pédiatriques",
+    description: "Soins adaptés aux enfants dans un environnement rassurant et bienveillant.",
+    icon: `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+  },
+];
+---
+
+<section id="services" class="py-20 bg-gray-50" aria-labelledby="services-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 id="services-heading" class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Nos Services
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Une gamme complète de soins dentaires pour toute la famille, réalisés avec expertise et bienveillance.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      {services.map((service) => (
+        <article class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="text-primary-500 mb-4" aria-hidden="true" set:html={service.icon}></div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
+          <p class="text-gray-600">{service.description}</p>
+        </article>
+      ))}
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-4">
+      <Image
+        src={img1}
+        alt="Équipement dentaire moderne"
+        class="rounded-lg object-cover w-full h-64"
+        loading="lazy"
+      />
+      <Image
+        src={img2}
+        alt="Salle de consultation"
+        class="rounded-lg object-cover w-full h-64"
+        loading="lazy"
+      />
+      <Image
+        src={img3}
+        alt="Matériel de précision"
+        class="rounded-lg object-cover w-full h-64"
+        loading="lazy"
+      />
+    </div>
+  </div>
+</section>
