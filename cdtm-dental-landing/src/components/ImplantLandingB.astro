@@ -1,0 +1,428 @@
+---
+import { Image } from 'astro:assets';
+import heroImage from '../assets/DSC00875-HDR-Large.jpg';
+import logo from '../assets/logo.jpg';
+
+const phoneNumber = '+212661530407';
+const phoneDisplay = '06 61 53 04 07';
+---
+
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/></noscript>
+
+<!-- Nav: Logo only (no phone button — reduces exit points, FSAstore +53.8%) -->
+<nav class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-slate-100 shadow-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center h-16">
+<div class="flex items-center gap-3">
+<Image src={logo} alt="CDTM Logo" class="h-10 w-auto drop-shadow-sm rounded-lg" width={48} height={48} />
+<div>
+<p class="text-xl font-bold tracking-tight text-[#003366] leading-none">Clinique Dentaire <span class="text-[#00AEEF]">Témara Mall</span></p>
+</div>
+</div>
+</div>
+</div>
+</nav>
+
+<!-- Hero: Short headline + video + CTA (above the fold — NNGroup 57% viewing time) -->
+<section id="hero-section" class="relative bg-gradient-to-b from-slate-50 to-white overflow-hidden pt-6 pb-12 lg:pt-12 lg:pb-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+
+<!-- Left: Headline + credentials + CTA -->
+<div class="flex flex-col gap-5 text-center lg:text-left order-2 lg:order-1">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-50 border border-green-200 text-green-800 w-fit mx-auto lg:mx-0">
+<span class="material-symbols-outlined text-green-600 text-sm filled">workspace_premium</span>
+<span class="text-xs font-bold">Diplômé Université de Gênes · Spécialiste Implantologie</span>
+</div>
+<h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-[#003366] leading-[1.1] tracking-tight">
+                    Implants Dentaires à Témara
+</h1>
+<p class="text-base sm:text-lg text-slate-600 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                    Ne laissez plus les dents manquantes affecter votre quotidien. Dr. SABAOUI vous accompagne du diagnostic à la pose.
+</p>
+<div class="flex flex-col items-center lg:items-start gap-3 mt-2">
+<a href={`tel:${phoneNumber}`} class="flex items-center justify-center gap-2 bg-[#0077B6] hover:bg-[#005f94] text-white font-bold py-4 px-10 rounded-full transition-all shadow-lg shadow-[#0077B6]/30 hover:-translate-y-0.5 w-full sm:w-auto text-lg" data-cta="hero-cta">
+<span class="material-symbols-outlined text-xl">call</span>
+                        Appelez Maintenant
+</a>
+</div>
+<!-- Trust signal: Google stars + family recommendation (Hofstede collectivism) -->
+<div class="flex items-center gap-3 bg-white py-2 px-4 rounded-lg shadow-sm border border-slate-100 w-fit mx-auto lg:mx-0">
+<img alt="Google" class="h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyJTKXxp08-Xo1n0FWsTUx6xhzulq-H-D8NiK0lt1_DZPCuSyzXL_QoO98RwGKmAMuHq-rGezF6g6W6Q3y40QF3uzwXIiUZ82d-vbWoiWFND5I_S2gHEBTmWEbrnL3DEoMHhD1blV_lBbJlE_1v8Fc8wGzuRjQHyO29FpfAJfc_D9JlmYGrL4XoDWoV7g5Kabw_CffKkBIdqtc2NvPKt9JfeGAjJizkO7Sw_4XT3AQdtLriHotHlV7pHvIGOztP4yav_FNzQXlTw"/>
+<div class="flex flex-col">
+<div class="flex text-yellow-400 text-sm">
+<span class="material-symbols-outlined text-sm filled">star</span>
+<span class="material-symbols-outlined text-sm filled">star</span>
+<span class="material-symbols-outlined text-sm filled">star</span>
+<span class="material-symbols-outlined text-sm filled">star</span>
+<span class="material-symbols-outlined text-sm filled">star</span>
+</div>
+<span class="text-xs font-bold text-slate-500">Recommandé par +100 familles à Témara</span>
+</div>
+</div>
+</div>
+
+<!-- Right: Video placeholder (CrazyEgg +64% conversions with video) -->
+<div class="order-1 lg:order-2 w-full">
+<div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-[#003366] aspect-video flex items-center justify-center cursor-pointer group" id="video-placeholder">
+<!-- Poster image behind the play button -->
+<Image
+  src={heroImage}
+  alt="Dr. SABAOUI — Implantologue à Témara Mall"
+  class="absolute inset-0 w-full h-full object-cover object-top opacity-60 group-hover:opacity-70 transition-opacity duration-300"
+  widths={[400, 768, 1024]}
+  sizes="(max-width: 768px) 100vw, 50vw"
+  format="webp"
+  quality={70}
+  loading="eager"
+/>
+<!-- Play button overlay -->
+<div class="relative z-10 flex flex-col items-center gap-3">
+<div class="w-20 h-20 rounded-full bg-white/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-[#0077B6] text-4xl filled" style="padding-left: 4px;">play_arrow</span>
+</div>
+<p class="text-white font-bold text-sm bg-black/40 px-4 py-1.5 rounded-full">Vidéo à venir</p>
+</div>
+<!-- Doctor name overlay at bottom -->
+<div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-[#003366]/90 to-transparent p-4 pt-12 z-10">
+<p class="text-white font-bold text-lg">Dr. SABAOUI Otmane</p>
+<p class="text-sm text-blue-200">Chirurgien Dentiste - Implantologue</p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Trust bar: key conversion drivers (CRO expert flagged as missing) -->
+<div class="border-y border-slate-100 bg-white py-6">
+<div class="max-w-5xl mx-auto px-4 flex flex-wrap justify-center items-center gap-6 md:gap-10">
+<div class="flex items-center gap-2 text-sm font-bold text-slate-700">
+<span class="material-symbols-outlined text-[#00AEEF]">verified_user</span>
+Garantie 10 Ans sur Implants
+</div>
+<div class="flex items-center gap-2 text-sm font-bold text-slate-700">
+<span class="material-symbols-outlined text-[#00AEEF]">payments</span>
+Paiement par Tranches
+</div>
+<div class="flex items-center gap-2 text-sm font-bold text-slate-700">
+<span class="material-symbols-outlined text-[#00AEEF]">schedule</span>
+Ouvert 7j/7 : 09h - 19h
+</div>
+</div>
+</div>
+
+<!-- Testimonials (WikiJob +34% with social proof near CTA) -->
+<section class="py-12 md:py-16 bg-slate-50">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-2xl md:text-3xl font-bold text-[#003366] text-center mb-8">Ce Que Disent Nos Patients</h2>
+<div class="grid md:grid-cols-3 gap-6">
+<div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
+<div class="flex text-yellow-400 text-sm mb-3">
+<span class="material-symbols-outlined text-sm filled">star</span>
+<span class="material-symbols-outlined text-sm filled">star</span>
+<span class="material-symbols-outlined text-sm filled">star</span>
+<span class="material-symbols-outlined text-sm filled">star</span>
+<span class="material-symbols-outlined text-sm filled">star</span>
+</div>
+<p class="text-slate-700 text-sm mb-3">"J'avais peur de la douleur, mais l'intervention s'est passée sans aucun souci. Aujourd'hui je mange et souris normalement. Merci Dr. SABAOUI !"</p>
+<p class="text-sm font-bold text-[#003366]">Fatima Z., 52 ans — Témara</p>
+<p class="text-xs text-slate-500">Implant unitaire</p>
+</div>
+<div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
+<div class="flex text-yellow-400 text-sm mb-3">
+<span class="material-symbols-outlined text-sm filled">star</span>
+<span class="material-symbols-outlined text-sm filled">star</span>
+<span class="material-symbols-outlined text-sm filled">star</span>
+<span class="material-symbols-outlined text-sm filled">star</span>
+<span class="material-symbols-outlined text-sm filled">star</span>
+</div>
+<p class="text-slate-700 text-sm mb-3">"Clinique moderne et équipe très professionnelle. Dr. SABAOUI m'a tout expliqué clairement, du début à la fin. Je recommande à 100%."</p>
+<p class="text-sm font-bold text-[#003366]">Ahmed M., 45 ans — Rabat</p>
+<p class="text-xs text-slate-500">Bridge sur implants</p>
+</div>
+<div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
+<div class="flex text-yellow-400 text-sm mb-3">
+<span class="material-symbols-outlined text-sm filled">star</span>
+<span class="material-symbols-outlined text-sm filled">star</span>
+<span class="material-symbols-outlined text-sm filled">star</span>
+<span class="material-symbols-outlined text-sm filled">star</span>
+<span class="material-symbols-outlined text-sm filled">star</span>
+</div>
+<p class="text-slate-700 text-sm mb-3">"Après des années avec un dentier, j'ai enfin des dents fixes. Le résultat est magnifique et naturel. Les facilités de paiement m'ont beaucoup aidé."</p>
+<p class="text-sm font-bold text-[#003366]">Khadija B., 61 ans — Salé</p>
+<p class="text-xs text-slate-500">Implants multiples</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Compact FAQ: top 4 objections (experts flagged zero objection handling) -->
+<section class="py-12 md:py-16 bg-white">
+<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-2xl md:text-3xl font-bold text-[#003366] text-center mb-8">Questions Fréquentes</h2>
+<div class="space-y-3">
+<details class="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden group">
+<summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-[#003366] hover:bg-slate-100 transition-colors">
+Est-ce que la pose d'un implant fait mal ?
+<span class="material-symbols-outlined text-[#00AEEF] group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-4 pb-4 text-sm text-slate-600 leading-relaxed">
+Non. L'intervention se fait sous anesthésie locale et est totalement indolore. La plupart de nos patients sont surpris par le confort de la procédure. Après l'intervention, une légère gêne peut être ressentie pendant 2-3 jours, facilement gérée avec des antidouleurs classiques.
+</div>
+</details>
+<details class="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden group">
+<summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-[#003366] hover:bg-slate-100 transition-colors">
+Proposez-vous des facilités de paiement ?
+<span class="material-symbols-outlined text-[#00AEEF] group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-4 pb-4 text-sm text-slate-600 leading-relaxed">
+Oui, nous proposons un paiement par tranches pour rendre les implants accessibles à tous. Nous fournissons également les feuilles de soins nécessaires pour le remboursement par votre mutuelle (CNSS, CNOPS ou mutuelle privée). Lors de votre première consultation, nous établissons un devis détaillé et discutons ensemble des options de paiement adaptées à votre budget.
+</div>
+</details>
+<details class="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden group">
+<summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-[#003366] hover:bg-slate-100 transition-colors">
+Combien de temps dure le traitement complet ?
+<span class="material-symbols-outlined text-[#00AEEF] group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-4 pb-4 text-sm text-slate-600 leading-relaxed">
+Le traitement complet prend généralement 3 à 6 mois, incluant la période de cicatrisation. La pose de l'implant elle-même dure 15 à 30 minutes. Pendant la cicatrisation, vous portez une prothèse provisoire esthétique.
+</div>
+</details>
+<details class="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden group">
+<summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-[#003366] hover:bg-slate-100 transition-colors">
+Suis-je un bon candidat pour un implant ?
+<span class="material-symbols-outlined text-[#00AEEF] group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-4 pb-4 text-sm text-slate-600 leading-relaxed">
+La grande majorité des adultes en bonne santé sont de bons candidats. Même en cas de volume osseux insuffisant, une greffe osseuse peut être réalisée avant la pose. Dr. SABAOUI évaluera votre situation lors d'une première consultation et vous proposera la meilleure solution.
+</div>
+</details>
+</div>
+</div>
+</section>
+
+<!-- Final CTA -->
+<section class="py-12 md:py-16 bg-[#003366] relative overflow-hidden" id="contact-form">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px]"></div>
+<div class="max-w-2xl mx-auto px-4 text-center relative z-10">
+<h2 class="text-2xl md:text-3xl font-bold text-white mb-3">Prenez Rendez-vous</h2>
+<p class="text-blue-200 mb-6">Dr. SABAOUI vous conseille personnellement · Sans engagement · Ouvert 7j/7</p>
+<a href={`tel:${phoneNumber}`} class="inline-flex items-center justify-center gap-3 py-4 px-10 rounded-full bg-white text-[#003366] font-bold text-lg shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5" data-cta="contact-call">
+<span class="material-symbols-outlined text-2xl">call</span>
+            {phoneDisplay}
+</a>
+<p class="text-blue-300 text-sm mt-4">Témara Mall, 4ème étage · Paiement par tranches disponible</p>
+</div>
+</section>
+
+<!-- Minimal footer -->
+<footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800">
+<div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+<div class="flex items-center gap-2 text-white">
+<span class="material-symbols-outlined text-[#00AEEF] text-2xl">dentistry</span>
+<span class="font-bold">Clinique Dentaire Témara Mall</span>
+</div>
+<div class="text-center md:text-right">
+<p>&copy; 2026 Clinique Dentaire Témara Mall. Tous droits réservés.</p>
+</div>
+</div>
+</footer>
+
+<!-- Sticky Mobile CTA Bar -->
+<div id="mobile-cta-bar" class="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-slate-200 shadow-[0_-4px_12px_rgba(0,0,0,0.1)] p-3 flex md:hidden translate-y-full transition-transform duration-300">
+  <a href={`tel:${phoneNumber}`} class="w-full flex items-center justify-center gap-2 py-3.5 rounded-full bg-[#0077B6] text-white font-bold shadow-lg shadow-[#0077B6]/30 transition-all hover:opacity-90" data-cta="sticky-call">
+    <span class="material-symbols-outlined text-lg">call</span>
+    Appelez Maintenant
+  </a>
+</div>
+
+<script is:inline>
+  // Sticky mobile CTA bar — runs inline (not deferred) for instant response on Samsung/slow devices
+  (function() {
+    var mobileCta = document.getElementById('mobile-cta-bar');
+    var heroCtaSection = document.querySelector('[data-cta="hero-cta"]');
+    var contactFormSection = document.getElementById('contact-form');
+    if (mobileCta && heroCtaSection) {
+      var heroVisible = true;
+      var contactVisible = false;
+      function updateMobileBar() {
+        if (heroVisible || contactVisible) {
+          mobileCta.classList.add('translate-y-full');
+          mobileCta.classList.remove('translate-y-0');
+        } else {
+          mobileCta.classList.remove('translate-y-full');
+          mobileCta.classList.add('translate-y-0');
+        }
+      }
+      var heroObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) { heroVisible = entry.isIntersecting; updateMobileBar(); });
+      }, { threshold: 0, rootMargin: '0px 0px -30% 0px' });
+      heroObserver.observe(heroCtaSection);
+      if (contactFormSection) {
+        var contactObserver = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) { contactVisible = entry.isIntersecting; updateMobileBar(); });
+        }, { threshold: 0 });
+        contactObserver.observe(contactFormSection);
+      }
+      // Immediate check — don't wait for first observer callback
+      var heroRect = heroCtaSection.getBoundingClientRect();
+      heroVisible = heroRect.bottom > 0 && heroRect.top < window.innerHeight * 0.7;
+      updateMobileBar();
+    }
+  })();
+</script>
+
+<script>
+  // A/B test variant tracking
+  var abVariant = 'B';
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'ab_test_impression', {
+      'test_name': 'longform_vs_video',
+      'variant': abVariant,
+      'landing_page': 'implant_landing'
+    });
+  }
+
+  // Capture GCLID and UTM parameters from URL (localStorage for 90-day attribution)
+  (function() {
+    const params = new URLSearchParams(window.location.search);
+    const trackingKeys = ['gclid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+    trackingKeys.forEach(function(key) {
+      const val = params.get(key);
+      if (val) {
+        localStorage.setItem(key, val);
+        localStorage.setItem(key + '_ts', Date.now().toString());
+      }
+    });
+    // Clean up entries older than 90 days
+    trackingKeys.forEach(function(key) {
+      const ts = localStorage.getItem(key + '_ts');
+      if (ts && (Date.now() - parseInt(ts)) > 90 * 24 * 60 * 60 * 1000) {
+        localStorage.removeItem(key);
+        localStorage.removeItem(key + '_ts');
+      }
+    });
+  })();
+
+  // CTA click tracking — skip tel: links (already tracked by Layout.astro phone_click)
+  document.querySelectorAll('[data-cta]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      const anchor = this as HTMLAnchorElement;
+      if (anchor.href && anchor.href.startsWith('tel:')) return;
+      const ctaType = (this as HTMLElement).getAttribute('data-cta') || 'unknown';
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'cta_click', {
+          'event_category': 'conversion',
+          'event_label': ctaType,
+          'landing_page': 'implant_landing',
+          'variant': abVariant
+        });
+      }
+    });
+  });
+
+  // Scroll depth tracking
+  const scrollMilestones = [25, 50, 75, 100];
+  const firedMilestones = new Set();
+  window.addEventListener('scroll', function() {
+    const scrollPercent = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+    scrollMilestones.forEach(function(milestone) {
+      if (scrollPercent >= milestone && !firedMilestones.has(milestone)) {
+        firedMilestones.add(milestone);
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'scroll_depth', {
+            'event_category': 'engagement',
+            'event_label': milestone + '%',
+            'landing_page': 'implant_landing',
+            'variant': abVariant
+          });
+        }
+      }
+    });
+  });
+
+</script>
+
+<!-- Implant-specific structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://cliniquedentairetemaramall.com"},
+    {"@type": "ListItem", "position": 2, "name": "Implants Dentaires", "item": "https://cliniquedentairetemaramall.com/implants-b"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Implants dentaires",
+  "alternateName": "زراعة الأسنان في تمارة",
+  "provider": {
+    "@type": "Dentist",
+    "name": "Clinique Dentaire Témara Mall",
+    "url": "https://cliniquedentairetemaramall.com"
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Témara"},
+    {"@type": "City", "name": "Rabat"},
+    {"@type": "City", "name": "Salé"},
+    {"@type": "City", "name": "Skhirat"}
+  ],
+  "description": "Pose d'implants dentaires de qualité par Dr. SABAOUI Otmane, chirurgien dentiste implantologue diplômé de l'Université de Gênes, à Témara Mall. زراعة أسنان بجودة عالية في تمارة مول"
+}
+</script>
+
+<!-- FAQ structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Est-ce que la pose d'un implant fait mal ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. L'intervention se fait sous anesthésie locale et est totalement indolore. La plupart de nos patients sont surpris par le confort de la procédure. Après l'intervention, une légère gêne peut être ressentie pendant 2-3 jours, facilement gérée avec des antidouleurs classiques."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Proposez-vous des facilités de paiement ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, nous proposons un paiement par tranches pour rendre les implants accessibles à tous. Nous fournissons également les feuilles de soins nécessaires pour le remboursement par votre mutuelle (CNSS, CNOPS ou mutuelle privée). Lors de votre première consultation, nous établissons un devis détaillé et discutons ensemble des options de paiement adaptées à votre budget."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de temps dure le traitement complet ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le traitement complet prend généralement 3 à 6 mois, incluant la période de cicatrisation. La pose de l'implant elle-même dure 15 à 30 minutes. Pendant la cicatrisation, vous portez une prothèse provisoire esthétique."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Suis-je un bon candidat pour un implant ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La grande majorité des adultes en bonne santé sont de bons candidats. Même en cas de volume osseux insuffisant, une greffe osseuse peut être réalisée avant la pose. Dr. SABAOUI évaluera votre situation lors d'une première consultation et vous proposera la meilleure solution."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+</style>
