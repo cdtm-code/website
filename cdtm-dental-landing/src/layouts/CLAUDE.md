@@ -7,6 +7,7 @@
 
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
+| #6445 | 6:30 PM | 🔵 | Review of Layout Component with `noindex` Prop | ~261 |
 | #6385 | 6:06 PM | ✅ | Added DNS Prefetch for Google User Content | ~235 |
 | #6382 | 6:05 PM | 🔵 | Read Layout.astro Meta Tags and Preconnects | ~283 |
 | #6368 | 5:56 PM | 🟣 | New Task Created for JavaScript and CSS Overhead Audit | ~405 |
