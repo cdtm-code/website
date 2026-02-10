@@ -1,0 +1,24 @@
+{
+    "mcpServers": {
+        "google-ads": {
+            "command": "docker",
+            "args": [
+                "run",
+                "-i",
+                "--rm",
+                "-v",
+                "/home/ismail/workspaces/compose/mcp-google-ads/credentials:/app/credentials:ro",
+                "--env-file",
+                "/home/ismail/workspaces/compose/mcp-google-ads/.env",
+                "mcp-google-ads:local"
+            ]
+        },
+        "stitch": {
+            "type": "http",
+            "url": "https://stitch.googleapis.com/mcp",
+            "headers": {
+                "X-Goog-Api-Key": "AQ.Ab8RN6Lm5kMo4SFZBus5XsSidV17oHzfCrqdEZxfsrTyRNT2Vg"
+            }
+        }
+    }
+}

@@ -1,0 +1,256 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - img "CDTM Logo" [ref=e6]
+        - generic [ref=e7]:
+          - paragraph [ref=e8]: Clinique Dentaire Témara Mall
+          - paragraph [ref=e9]:
+            - generic [ref=e10]: location_on
+            - text: Témara Mall, 4ème étage
+      - link "call" [ref=e12] [cursor=pointer]:
+        - /url: tel:+212661530407
+        - generic [ref=e13]: call
+  - generic [ref=e16]:
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - generic [ref=e19]: verified
+        - generic [ref=e20]: Spécialiste en Implantologie à Témara
+      - heading "Implants Dentaires à Témara — Consultation Gratuite" [level=1] [ref=e21]
+      - paragraph [ref=e22]: Vous avez perdu une ou plusieurs dents ? Le Dr. SABAOUI, spécialiste en implantologie (diplômé de l'Université de Gênes), vous accompagne du diagnostic à la pose — dans un cadre moderne et accessible, au cœur de Témara Mall.
+      - generic [ref=e23]:
+        - generic [ref=e24]:
+          - img "Google" [ref=e25]
+          - generic [ref=e26]:
+            - generic [ref=e27]:
+              - generic [ref=e28]: star
+              - generic [ref=e29]: star
+              - generic [ref=e30]: star
+              - generic [ref=e31]: star
+              - generic [ref=e32]: star
+            - generic [ref=e33]: 5/5 sur 100+ avis Google
+        - generic [ref=e34]:
+          - generic [ref=e35]: storefront
+          - generic [ref=e36]:
+            - generic [ref=e37]: Situé au
+            - generic [ref=e38]: Témara Mall, 4ème étage
+        - generic [ref=e39]:
+          - generic [ref=e40]: verified_user
+          - generic [ref=e41]: Garantie 10 Ans sur Implants
+      - link "calendar_month Prendre Rendez-vous" [ref=e43] [cursor=pointer]:
+        - /url: "#contact-form"
+        - generic [ref=e44]: calendar_month
+        - text: Prendre Rendez-vous
+    - generic [ref=e46]:
+      - img "Implants dentaires - Cabinet moderne Clinique Dentaire Témara Mall" [ref=e47]
+      - generic [ref=e48]:
+        - paragraph [ref=e49]: Dr. SABAOUI Otmane
+        - paragraph [ref=e50]: Chirurgien Dentiste - Implantologue
+  - generic [ref=e52]:
+    - paragraph [ref=e53]: Reconnu par les organismes de santé & certifié
+    - generic [ref=e54]:
+      - generic [ref=e55]:
+        - generic [ref=e56]: school
+        - text: Faculté de Médecine Dentaire - Rabat
+      - generic [ref=e57]:
+        - generic [ref=e58]: medical_services
+        - text: Chirurgie Orale
+      - generic [ref=e59]:
+        - generic [ref=e60]: workspace_premium
+        - text: Diplôme de l'Université de Gênes - Italie
+  - generic [ref=e63]:
+    - generic [ref=e64]:
+      - heading "Votre Implant, en Toute Confiance" [level=2] [ref=e65]
+      - paragraph [ref=e66]:
+        - text: Sous la direction du
+        - strong [ref=e67]: Dr. SABAOUI Otmane
+        - text: ", notre clinique moderne située au Témara Mall offre une expertise pointue en réhabilitation orale et esthétique dentaire."
+      - list [ref=e68]:
+        - listitem [ref=e69]:
+          - generic [ref=e70]: check_circle
+          - generic [ref=e71]: Expertise confirmée en implantologie et chirurgie orale.
+        - listitem [ref=e72]:
+          - generic [ref=e73]: check_circle
+          - generic [ref=e74]: Protocoles de stérilisation stricts et équipements de pointe.
+        - listitem [ref=e75]:
+          - generic [ref=e76]: check_circle
+          - generic [ref=e77]: Emplacement accessible au cœur du Témara Mall.
+    - generic [ref=e78]:
+      - heading "Nos Solutions Implantaires" [level=3] [ref=e79]
+      - generic [ref=e80]:
+        - generic [ref=e81]:
+          - generic [ref=e83]: dentistry
+          - generic [ref=e84]:
+            - heading "Implant Unitaire" [level=4] [ref=e85]
+            - paragraph [ref=e86]: Remplacement d'une seule dent manquante avec un implant et une couronne en céramique.
+        - generic [ref=e87]:
+          - generic [ref=e89]: medical_services
+          - generic [ref=e90]:
+            - heading "Bridge sur Implants" [level=4] [ref=e91]
+            - paragraph [ref=e92]: Restauration de plusieurs dents avec un bridge fixé sur 2 à 4 implants. Solution durable et confortable.
+        - generic [ref=e93]:
+          - generic [ref=e95]: healing
+          - generic [ref=e96]:
+            - heading "Greffe Osseuse" [level=4] [ref=e97]
+            - paragraph [ref=e98]: Reconstruction osseuse pré-implantaire pour les patients avec un volume osseux insuffisant.
+  - generic [ref=e100]:
+    - paragraph [ref=e101]: Consultation gratuite · Devis détaillé · Paiement par tranches · Feuilles de soins pour mutuelles
+    - link "calendar_month Prendre Rendez-vous" [ref=e102] [cursor=pointer]:
+      - /url: "#contact-form"
+      - generic [ref=e103]: calendar_month
+      - text: Prendre Rendez-vous
+  - generic [ref=e105]:
+    - heading "Votre Parcours Implantaire" [level=2] [ref=e106]
+    - paragraph [ref=e107]: De la première consultation à votre nouveau sourire, un processus clair et encadré par le Dr. SABAOUI.
+    - generic [ref=e108]:
+      - generic [ref=e109]:
+        - generic [ref=e111]: stethoscope
+        - generic [ref=e112]: Étape 1
+        - heading "Consultation & Diagnostic" [level=3] [ref=e113]
+        - paragraph [ref=e114]: Examen clinique, radio panoramique et plan de traitement personnalisé.
+      - generic [ref=e115]:
+        - generic [ref=e117]: dentistry
+        - generic [ref=e118]: Étape 2
+        - heading "Pose de l'Implant" [level=3] [ref=e119]
+        - paragraph [ref=e120]: "Intervention sous anesthésie locale, indolore. Durée : 30 à 60 minutes par implant."
+      - generic [ref=e121]:
+        - generic [ref=e123]: schedule
+        - generic [ref=e124]: Étape 3
+        - heading "Cicatrisation" [level=3] [ref=e125]
+        - paragraph [ref=e126]: Période de 2 à 4 mois pour l'ostéointégration. Suivi régulier assuré.
+      - generic [ref=e127]:
+        - generic [ref=e129]: emoji_emotions
+        - generic [ref=e130]: Étape 4
+        - heading "Pose de la Couronne" [level=3] [ref=e131]
+        - paragraph [ref=e132]: Couronne en céramique sur mesure. Résultat naturel et durable.
+  - generic [ref=e134]:
+    - heading "Ce Que Disent Nos Patients" [level=2] [ref=e135]
+    - paragraph [ref=e136]: Des sourires retrouvés grâce à l'expertise du Dr. SABAOUI.
+    - generic [ref=e137]:
+      - generic [ref=e138]:
+        - generic [ref=e139]:
+          - generic [ref=e140]: star
+          - generic [ref=e141]: star
+          - generic [ref=e142]: star
+          - generic [ref=e143]: star
+          - generic [ref=e144]: star
+        - paragraph [ref=e145]: "\"J'avais peur de la douleur, mais l'intervention s'est passée sans aucun souci. Aujourd'hui je mange et souris normalement. Merci Dr. SABAOUI !\""
+        - paragraph [ref=e146]: Fatima Z., 52 ans — Témara
+        - paragraph [ref=e147]: Implant unitaire
+      - generic [ref=e148]:
+        - generic [ref=e149]:
+          - generic [ref=e150]: star
+          - generic [ref=e151]: star
+          - generic [ref=e152]: star
+          - generic [ref=e153]: star
+          - generic [ref=e154]: star
+        - paragraph [ref=e155]: "\"Clinique moderne et équipe très professionnelle. Le Dr. m'a tout expliqué clairement, du début à la fin. Je recommande à 100%.\""
+        - paragraph [ref=e156]: Ahmed M., 45 ans — Rabat
+        - paragraph [ref=e157]: Bridge sur implants
+      - generic [ref=e158]:
+        - generic [ref=e159]:
+          - generic [ref=e160]: star
+          - generic [ref=e161]: star
+          - generic [ref=e162]: star
+          - generic [ref=e163]: star
+          - generic [ref=e164]: star
+        - paragraph [ref=e165]: "\"Après des années avec un dentier, j'ai enfin des dents fixes. Le résultat est magnifique et naturel. Les facilités de paiement m'ont beaucoup aidé.\""
+        - paragraph [ref=e166]: Khadija B., 61 ans — Salé
+        - paragraph [ref=e167]: Implants multiples
+  - generic [ref=e169]:
+    - heading "Questions Fréquentes sur les Implants" [level=2] [ref=e170]
+    - generic [ref=e171]:
+      - group [ref=e172]:
+        - generic "Est-ce que la pose d'un implant fait mal ? expand_more" [ref=e173] [cursor=pointer]:
+          - text: Est-ce que la pose d'un implant fait mal ?
+          - generic [ref=e174]: expand_more
+      - group [ref=e175]:
+        - generic "Combien de temps dure le traitement complet ? expand_more" [ref=e176] [cursor=pointer]:
+          - text: Combien de temps dure le traitement complet ?
+          - generic [ref=e177]: expand_more
+      - group [ref=e178]:
+        - generic "Quelle est la durée de vie d'un implant dentaire ? expand_more" [ref=e179] [cursor=pointer]:
+          - text: Quelle est la durée de vie d'un implant dentaire ?
+          - generic [ref=e180]: expand_more
+      - group [ref=e181]:
+        - generic "Proposez-vous des facilités de paiement ? expand_more" [ref=e182] [cursor=pointer]:
+          - text: Proposez-vous des facilités de paiement ?
+          - generic [ref=e183]: expand_more
+      - group [ref=e184]:
+        - generic "Suis-je un bon candidat pour un implant ? expand_more" [ref=e185] [cursor=pointer]:
+          - text: Suis-je un bon candidat pour un implant ?
+          - generic [ref=e186]: expand_more
+      - group [ref=e187]:
+        - generic "Est-ce que les implants sont pris en charge par la mutuelle ? expand_more" [ref=e188] [cursor=pointer]:
+          - text: Est-ce que les implants sont pris en charge par la mutuelle ?
+          - generic [ref=e189]: expand_more
+      - group [ref=e190]:
+        - generic "Y a-t-il un âge limite pour poser un implant ? expand_more" [ref=e191] [cursor=pointer]:
+          - text: Y a-t-il un âge limite pour poser un implant ?
+          - generic [ref=e192]: expand_more
+  - generic [ref=e196]:
+    - generic [ref=e197]:
+      - heading "Votre Consultation Gratuite" [level=2] [ref=e198]
+      - paragraph [ref=e199]: Réservez votre consultation gratuite et sans engagement. Le Dr. SABAOUI évaluera votre cas et vous proposera un plan de traitement clair, avec un devis détaillé.
+      - generic [ref=e200]:
+        - generic [ref=e201]:
+          - generic [ref=e203]: location_on
+          - generic [ref=e204]:
+            - paragraph [ref=e205]: Témara Mall, 4ème étage
+            - paragraph [ref=e206]: Parking disponible
+        - generic [ref=e207]:
+          - generic [ref=e209]: call
+          - generic [ref=e210]:
+            - link "06 61 53 04 07" [ref=e211] [cursor=pointer]:
+              - /url: tel:+212661530407
+            - paragraph [ref=e212]: Appelez pour une consultation gratuite
+        - generic [ref=e213]:
+          - generic [ref=e215]: schedule
+          - generic [ref=e216]:
+            - paragraph [ref=e217]: "Ouvert 7j/7 : 09h - 19h"
+            - paragraph [ref=e218]: Y compris samedi et dimanche
+    - generic [ref=e219]:
+      - heading "Prenez Rendez-vous — Consultation Gratuite" [level=3] [ref=e220]
+      - paragraph [ref=e221]: Nous vous rappelons dans l'heure pour confirmer votre créneau.
+      - generic [ref=e222]:
+        - generic [ref=e223]:
+          - generic [ref=e224]: Nom Complet
+          - textbox "Nom Complet" [ref=e225]:
+            - /placeholder: Votre nom
+        - generic [ref=e226]:
+          - generic [ref=e227]: Téléphone
+          - textbox "Téléphone" [ref=e228]:
+            - /placeholder: 06 00 00 00 00
+        - button "Prendre Rendez-vous" [ref=e229] [cursor=pointer]
+        - paragraph [ref=e230]: Réponse garantie sous 1h · Sans engagement · Vos données restent confidentielles
+        - paragraph [ref=e231]: Vous serez redirigé vers WhatsApp pour confirmer votre consultation
+  - contentinfo [ref=e232]:
+    - generic [ref=e233]:
+      - generic [ref=e234]:
+        - generic [ref=e235]: dentistry
+        - generic [ref=e236]: Clinique Dentaire Témara Mall
+      - paragraph [ref=e238]: © 2026 Clinique Dentaire Témara Mall. Tous droits réservés.
+  - generic [ref=e239]:
+    - link "Nous écrire" [ref=e240] [cursor=pointer]:
+      - /url: https://wa.me/212661530407?text=Bonjour%2C%20je%20souhaite%20prendre%20rendez-vous%20pour%20un%20implant%20dentaire.
+      - img [ref=e241]
+      - text: Nous écrire
+    - link "calendar_month Prendre RDV" [ref=e243] [cursor=pointer]:
+      - /url: "#contact-form"
+      - generic [ref=e244]: calendar_month
+      - text: Prendre RDV
+  - generic [ref=e247]:
+    - button "Menu" [ref=e248]:
+      - img [ref=e250]
+      - generic: Menu
+    - button "Inspect" [ref=e254]:
+      - img [ref=e256]
+      - generic: Inspect
+    - button "Audit" [ref=e258]:
+      - generic [ref=e259]:
+        - img [ref=e260]
+        - img [ref=e263]
+      - generic: Audit
+    - button "Settings" [ref=e266]:
+      - img [ref=e268]
+      - generic: Settings
