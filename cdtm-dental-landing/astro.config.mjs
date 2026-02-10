@@ -7,6 +7,9 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://cliniquedentairetemaramall.com',
   integrations: [tailwind(), sitemap()],
+  build: {
+    inlineStylesheets: 'always',
+  },
   vite: {
     server: {
       allowedHosts: ['test-cdtm.dev2.rbouh.com'],

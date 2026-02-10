@@ -520,10 +520,12 @@ Non, il n'y a pas d'âge limite supérieur. Des patients de 50, 60 ou même 70 a
         }, { threshold: 0 });
         contactObserver.observe(contactFormSection);
       }
-      // Immediate check — don't wait for first observer callback
-      var heroRect = heroCtaSection.getBoundingClientRect();
-      heroVisible = heroRect.bottom > 0 && heroRect.top < window.innerHeight * 0.7;
-      updateMobileBar();
+      // Immediate check — defer to avoid forced reflow during paint
+      requestAnimationFrame(function() {
+        var heroRect = heroCtaSection.getBoundingClientRect();
+        heroVisible = heroRect.bottom > 0 && heroRect.top < window.innerHeight * 0.7;
+        updateMobileBar();
+      });
     }
   })();
 </script>
